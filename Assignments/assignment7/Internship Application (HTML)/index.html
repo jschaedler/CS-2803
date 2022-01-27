@@ -6,7 +6,27 @@
 <body>
    <h1>Internship Application</h1>
    
+   
    <!-- Add the form below -->
+   <form method="POST" enctype="multipart/form-data" action="https://wp.zybooks.com/form-viewer.php">
+      <div>
+         <label for="fullName">Full name: </label>
+         <input type="text" id="fullName" name="fullName" required>
+      </div>
+      <div>
+         <label for="email">Email address: </label>
+         <input type="text" id="email" name="email" required> 
+      </div>
+      <div>
+         <label for="about">About you: </label> 
+         <textarea name="about" id="about" cols="50" rows="3"></textarea>
+      </div>
+      <div>
+         <label for="resume">Resume: </label>
+         <input type="file" name="resume" id="resume">
+      </div>
+      <div><input type="submit"></div>
+   </form>
    
 </body>
 
