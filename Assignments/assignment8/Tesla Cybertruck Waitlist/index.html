@@ -15,27 +15,29 @@
       <div>
          <label for="emailAddr">Email address?</label>
          
-         <!-- TODO: Add regular expression to pattern -->
-         <input type="email" id="emailAddr" name="emailAddr" placeholder="name@domain.com">
+         <input type="email" id="emailAddr" name="emailAddr" placeholder="name@domain.com" pattern="[a-zA-Z0-9-_\.]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*">
       </div>
       <div>
          <label for="dateToSend">Date to send?</label>
-         <!-- TODO: Add date widget -->
+         <input type="date" name="dateToSend" id="dateToSend"> 
       </div>
       <div>
          <label for="carColor">Car color?</label>
-         <!-- TODO: Add color widget -->
+         <input type="color" name="carColor" id="carColor">
       </div>
       <div>
          <label for="downPayment">Down payment?</label>
-         <!-- TODO: Add number widget -->
+         <input type="number" name="downPayment" id="downPayment" value="0" min="0" max="10000">
       </div>
       <div>
          <label for="satisfaction">Satisfaction with this online form?</label>
-         <!-- TODO: Add range widget -->
+         <input type="range" id="satisfaction" name="satisfaction" value="50" min="0" max="100">
       </div>
      
-     <!-- TODO: Add submit button -->
+     <div>
+        
+      <button type="submit" value="Submit">Apply</button>
+     </div>
    </form>
    
 </body>
