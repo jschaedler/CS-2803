@@ -8,7 +8,47 @@
    <h1>Order a Pizza</h1>
    
    <!-- Place your form here -->
-   
+   <form method="POST" action="https://wp.zybooks.com/form-viewer.php">
+      <p>
+         Crust:
+         <input type="radio" name="crust" id="thin" value="stuffed">
+         <label for="thin">Thin</label>
+
+         <input type="radio" name="crust" id="stuffed" value="stuffed" checked> 
+         <label for="stuffed">Stuffed</label>
+
+      </p>
+      <p>
+         When would you like to pick uup the pizza?
+         <select name="pickUpTime" id="pickUpTime">
+            <option value="30 minutes">30 minutes</option>
+            <option value="1 hour">1 hour</option>
+            <option value="6 hours">6 hours</option>
+            <option value="24 hours">24 hours</option>
+            <option value="48 hours">48 hours</option>
+         </select>
+      </p>
+      <p>
+         Toppings: <br>
+         <input type="checkbox" name="toppings" id="mushroom" value="Mushroom">
+         <label for="mushroom">Mushroom</label>
+         <br>
+         <input type="checkbox" name="toppings" id="pepperoni" value="Pepperoni">
+         <label for="pepperoni">Pepperoni</label>
+         <br>
+         <input type="checkbox" name="toppings" id="pineapple" value="Pineapple">
+         <label for="pineapple">Pineapple</label>
+         <br>
+         <input type="checkbox" name="toppings" id="peppers" value="Peppers">
+         <label for="peppers">Peppers</label>
+         <br>
+         <input type="checkbox" name="toppings" id="ranch" value="Ranch">
+         <label for="ranch">Ranch</label>
+      </p>
+
+      <input type="submit" value="Submit">
+
+   </form>
 </body>
 
 </html>
