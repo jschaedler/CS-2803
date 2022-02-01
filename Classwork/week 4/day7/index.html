@@ -10,11 +10,31 @@
     <style>
         /* This is a comment in css*/
 
+        /*The five basic selctors */
         /*element selctor*/
         li{
             color:rgb(92, 92, 156)
         }
-        /**/
+        /*class selector*/
+        .thumbnail-center{
+            color: blue;
+            font-weight: bold;
+        }
+        /*Id selector*/ 
+        #my_Id{
+            color :blueviolet
+        }
+        /*Decendent selctor*/
+        /*all li that are decendants of ul will change*/
+        ul li{
+        color: brown;
+        } 
+
+        /*pseudo-class*/
+        li:hover{
+            color: cadetblue;
+        }
+        
     </style>
 </head>
 
