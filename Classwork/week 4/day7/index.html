@@ -4,14 +4,25 @@
     <meta charset="UTF-8">
     <title>Aristotle Onassis</title>
 
+    <!--The following links the styles in an external style sheet-->
+    <link rel="stylesheet" href="styles.css">
+    <!--The style tags below are embedded css. Everything within them will be css-->
+    <style>
+        /* This is a comment in css*/
 
+        /*element selctor*/
+        li{
+            color:rgb(92, 92, 156)
+        }
+        /**/
     </style>
 </head>
 
 <body>
     <div class="container">
         <div class="jumbotron">
-            <div class="row">
+            <!--we'll make everything in here green with in line stylin-->
+            <div class="row" style="color:rgb(20, 233, 20)">
                 <div class="col-md-12">
                     <h1 class="text-center">Aristotle Onassis</h1>
                     <h2 class="text-center">1906 - 1975</h2>
@@ -23,7 +34,7 @@
                     <div class="thumbnail">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Aristotle_Onassis.JPG"
                             alt="Aristotle Onassis" class="img-circle">
-                        <div class="caption text-center">
+                        <div class="caption text-center" style="color: rgb(121, 187, 187);">
                             The most well-known portrait of Onassis.
                         </div>
                     </div>
