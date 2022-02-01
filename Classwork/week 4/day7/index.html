@@ -34,7 +34,17 @@
         li:hover{
             color: cadetblue;
         }
-        
+
+        /*Attribute selctor*/
+        [alt~="citation"]{
+            color: rgb(236, 150, 20);
+        }
+
+        /*Pseudo element selector 
+        make first letter of tag blck */
+        div::first-letter{
+            color:black
+        }
     </style>
 </head>
 
