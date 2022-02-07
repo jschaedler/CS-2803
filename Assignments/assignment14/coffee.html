@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Coffee Order From</title>
+
+	<style>
+		body {
+			font-family: Calibri, Myriad, Arial;
+		}
+
+		div {
+			margin-bottom: 5px;
+		}
+
+		/* Your solution goes here */
+
+	</style>
+</head>
+<body>
+	<h1>Coffee Order</h1>
+	<p><span class="required"></span> indicates required field.</p>
+	<form>
+		<div>
+			<label class="required">Name</label>
+			<input type="text" name="title">
+		</div>
+		<div>
+			<label class="required">Pick-Up Date</label>
+			<input type="date" name="purchase-date">
+		</div>
+		<div>
+			<label class="required">Ounces</label>
+			<input type="number" name="rating" value="8" min="1" max="32">
+		</div> 
+		<div> 
+			<label>Comments</label>      
+			<textarea rows="3" cols="50" name="comments"></textarea> 
+		</div>
+		<input type="submit" value="Order Coffee">
+	</form>
+</body>
+</html>
