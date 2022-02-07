@@ -1,0 +1,33 @@
+/* Add your styles here */
+img {
+    width : 250px;
+}
+
+h1 {
+    padding: 10px;
+    font-family: Helvetica;
+    font-size: 30px;
+    color: gold;
+    background-color: navy;
+
+}
+
+#author-name-and-date{
+    font-family: arial;
+    font-size: 15px;
+    color: darkslateblue;
+}
+
+p, ul {
+    font-family: helvetica;
+    font-size: 16px;
+    color: dimgrey;
+
+}
+
+a {
+    font-family: Arial;
+    font-size: 12px;
+    color: darkblue;
+}
+
