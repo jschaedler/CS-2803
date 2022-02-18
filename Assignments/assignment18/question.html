@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <title>Simplification</title>
+  <style>
+    body {
+      font-family: serif;
+      font-size: 5em;
+      color: rgb(126, 128, 130);
+    }
+
+    #answer {
+      color: rgb(65, 120, 156);
+      width: 100px;
+      
+      /* Part of your solution goes here */
+      animation: moveAnswer 2.5s  1s ;
+      animation-fill-mode: forwards;
+
+    }
+
+    /* moveFraction goes here */
+    @keyframes moveAnswer {
+    0% {
+      color: rgb(243, 74, 94);
+      transform:translate(-400px,100px);
+    }
+    50% {
+      transform: translate(0px,100px);
+    }
+    100%{
+      transform: translate(0px,0px);
+      color:rgb(139, 74, 243);
+    }
+}
+
+    #question {
+      /* Part of your solution goes here */
+      transition: transform 2s ease-in-out 0.5s;
+    
+    }
+
+    #question:hover {
+      /* Part of your solution goes here */
+      transform: rotate(360deg);
+    }
+
+    span {
+      display: inline-block;
+    }
+  </style>
+
+  <body>
+    <span id="question">Simplify the fraction 3/6</span>
+    <span id="answer">&frac12;</span>
+  </body>
+</html>
