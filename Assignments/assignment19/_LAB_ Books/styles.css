@@ -1,0 +1,81 @@
+.table {
+  width: 600px;
+  height: 600px;
+
+  /* Part of your solution goes here */
+  background: linear-gradient(cyan, deepskyblue);
+}
+
+.bookFirstColor {
+  /* Part of your solution goes here */
+  color: rgb(87, 52, 30);
+}
+
+.bookSecondColor {
+  /* Part of your solution goes here */
+  color: rgb(252, 98, 2);
+
+}
+
+.book {
+  background-color: azure;
+  border: 1px solid black;
+  width: 200px;
+  height: 200px;
+  line-height: 40px;
+  text-align: center;
+  padding-top: 60px;
+  font-size: 24px;
+  font-family: sans-serif;
+  
+  /* Part of your solution goes here */
+  border-radius: 5px;
+  box-shadow: 3px 3px black;
+}
+
+.bookTop {
+  /* Part of your solution goes here */
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  z-index: 2;
+
+}
+
+.bookBottom {
+  /* Part of your solution goes here */
+  position: absolute;
+  right: 100px;
+  bottom: 100px;
+  left: 300px;
+  top: 300px;
+  z-index: 1;
+}
+
+.firstSymbol {
+  font-size: 28px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.secondSymbol {
+  font-size: 36px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.topLeft {
+  /* Part of your solution goes here */
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.bottomRight {
+  /* Part of your solution goes here */
+  position: absolute;
+  right: 10px;
+  bottom:10px;
+}
