@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Length Unit Converter</title>
+      <script src="convert.js"></script>
+      <style>
+         body {
+            font-family: Arial, Helvetica, sans-serif;
+         }
+         
+         label {
+            display: block;
+         }
+   
+         #errorMessage {
+            color: red;
+         }
+      </style>
+   </head>
+   <body>
+      <h1>Length Unit Converter</h1>
+      <p>
+         <label for="inchesInput">Inches:</label>
+         <input id="inchesInput" type="text">
+      </p>
+      <p>
+         <label for="centimetersInput">Centimeters:</label>
+         <input id="centimetersInput" type="text">
+      </p>
+      <input id="convertButton" type="button" value="Convert">
+      <div id="errorMessage">
+      </div>
+      <p>
+         <img id="image" src="ruler.png" alt="clipart of a ruler">
+      </p>
+   </body>
+
+</html>
