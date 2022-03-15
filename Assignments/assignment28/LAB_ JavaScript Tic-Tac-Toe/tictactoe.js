@@ -105,7 +105,7 @@ function switchTurn() {
 	if (checkForWinner() === 1) {
 		if (playerTurn == true) {
 			playerTurn = false
-			computerMoveTimeout = setTimeout(makeComputerMove(), 1000)
+			computerMoveTimeout = setTimeout(makeComputerMove, 1000)
 			document.getElementById("turnInfo").innerHTML = "Computer's turn"
 
 		} else {
