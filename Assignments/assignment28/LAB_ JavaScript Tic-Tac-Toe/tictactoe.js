@@ -73,16 +73,75 @@ function checkForWinner() {
 
 function newGame() {
 	// TODO: Complete the function
+	clearTimeout(computerMoveTimeout)
+	computerMoveTimeout = 0
+	for (button of getGameBoardButtons()) {
+		button.className = ""
+		button.innerHTML = ""
+		button.disabled = false
+		
+
+	}
+	playerTurn = true
+	gameOver = false  
+	document.getElementById("turnInfo").innerHTML = "Your turn"
+
+
 }
 
 function boardButtonClicked(button) {
 	// TODO: Complete the function
+	if (playerTurn == true) {
+		button.innerHTML = "X"
+		button.classList.add("x")
+		button.disabled = true
+		switchTurn()
+	}
 }
 
 function switchTurn() {
 	// TODO: Complete the function
+	
+	if (checkForWinner() === 1) {
+		if (playerTurn == true) {
+			playerTurn = false
+			computerMoveTimeout = setTimeout(makeComputerMove(), 1000)
+			document.getElementById("turnInfo").innerHTML = "Computer's turn"
+
+		} else {
+			playerTurn = true
+			document.getElementById("turnInfo").innerHTML = "Your turn"
+			
+		}
+	} else {
+		playerTurn = false
+		if (checkForWinner() === 2) {
+			document.getElementById("turnInfo").innerHTML = "You win!"
+		} else if (checkForWinner() === 3) {
+			document.getElementById("turnInfo").innerHTML = "Computer wins!"
+		} else {
+			document.getElementById("turnInfo").innerHTML = "Draw game"
+
+		}
+	} 
+
 }
 
 function makeComputerMove() {
+
 	// TODO: Complete the function
+	clearTimeout(computerMoveTimeout)
+	let i = false
+	while (!i) {
+		let rand = Math.floor(Math.random() *9)
+		let bb = getGameBoardButtons()
+		if (bb[rand].disabled == false) {
+			bb[rand].innerHTML = "O" 
+			bb[rand].classList.add("o")
+			bb[rand].disabled = true
+			i = true 
+		}
+	}
+	switchTurn()
+
 }
