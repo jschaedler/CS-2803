@@ -14,14 +14,28 @@ window.addEventListener("DOMContentLoaded", function () {
 
 function fetchQuotes(topic, count) {
    // TODO: Modify to use XMLHttpRequest
-
-   let html = "<ol>";
-   for (let c = 1; c <= count; c++) {
-      html += `<li>Quote ${c} - Anonymous</li>`;
-   }
-   html += "</ol>";
-
-   document.querySelector("#quotes").innerHTML = html;
+   let xhr = new XMLHttpRequest()
+   xhr.addEventListener("load", responseReceivedHandler)
+   xhr.responseType = "json"
+   let queryString = "topic=" +encodeURIComponent(topic)+ "&count=" + encodeURIComponent(count)
+   xhr.open("GET", "https://wp.zybooks.com/quotes.php?" + queryString)
+   xhr.send()
+   
 }
 
 // TODO: Add responseReceivedHandler() here
+function responseReceivedHandler() {
+   var html = "";
+   if (this.response.error) {
+       html = this.response.error;
+   }
+   else {
+       html += "<ol>";
+
+       for (let c = 0; c < this.response.length; c++) {
+           html += `<li>${this.response[c].quote} - ${this.response[c].source}</li>`;
+       }
+       html += "</ol>";
+   }
+   document.querySelector("#quotes").innerHTML = html;
+}
